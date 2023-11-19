@@ -1,0 +1,13 @@
+<script>
+    const ws = new WebSocket("ws://localhost:8000")
+    console.log(ws)
+
+    ws.onopen = (event)=>{
+        console.log(event)
+        ws.send("Baba, I have come to offer my offering!!!")
+    }
+
+    ws.onmessage = (message)=>{
+        console.log(message.data)
+    }
+</script>
